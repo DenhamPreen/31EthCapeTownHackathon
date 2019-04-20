@@ -13,15 +13,177 @@ class AnimalCardContainer extends Component {
         this.state = {
             showStore: true,
             cards: [
-                { id: 1, name: "Jon Jon", cardDisplay: 'block' }
-                , { id: 2, name: "Zuckerberg", cardDisplay: 'block' }
-                , { id: 3, name: "3rd", cardDisplay: 'block' }
-                , { id: 4, name: "4th", cardDisplay: 'block' }
-                , { id: 5, name: "5th", cardDisplay: 'block' }
-                , { id: 6, name: "6th", cardDisplay: 'block' }
-                , { id: 7, name: "7th", cardDisplay: 'block' }
-                , { id: 8, name: "8th", cardDisplay: 'block' }
-                , { id: 9, name: "9th", cardDisplay: 'block' }
+                {   
+                    id: 1, 
+                    name: "Vitalik", // let user set this on first buy
+                    age: 12,
+                    lineage: "african",
+                    weight : 900,
+                    is_female: false,
+                    img_source_url: "myurl",
+
+                    // Values we will be pulling from chain
+                    // hardcoding them for now...
+                    price: 100,
+                    current_owner: 0x348341035837599834,
+                    time_held: 12, //must define if this is hours days etc...
+                    highest_price: 12314,
+                    revenue_generated: 9
+                },
+                {   
+                    id: 2, 
+                    name: "Andrew", // let user set this on first buy
+                    age: 12,
+                    lineage: "african",
+                    weight : 900,
+                    is_female: false,
+                    img_source_url: "myurl",
+
+                    // Values we will be pulling from chain
+                    // hardcoding them for now...
+                    price: 100,
+                    current_owner: 0x348341035837599834,
+                    time_held: 12, //must define if this is hours days etc...
+                    highest_price: 12314,
+                    revenue_generated: 9
+                },
+                {   
+                    id: 3, 
+                    name: "Simon", // let user set this on first buy
+                    age: 12,
+                    lineage: "african",
+                    weight : 900,
+                    is_female: true,
+                    img_source_url: "myurl",
+
+                    // Values we will be pulling from chain
+                    // hardcoding them for now...
+                    price: 100,
+                    current_owner: 0x348341035837599834,
+                    time_held: 12, //must define if this is hours days etc...
+                    highest_price: 12314,
+                    revenue_generated: 9
+                },
+                {   
+                    id: 4, 
+                    name: "Griff", // let user set this on first buy
+                    age: 12,
+                    lineage: "african",
+                    weight : 900,
+                    is_female: false,
+                    img_source_url: "myurl",
+
+                    // Values we will be pulling from chain
+                    // hardcoding them for now...
+                    price: 100,
+                    current_owner: 0x348341035837599834,
+                    time_held: 12, //must define if this is hours days etc...
+                    highest_price: 12314,
+                    revenue_generated: 9
+                },
+                {   
+                    id: 5, 
+                    name: "Anastasia", // let user set this on first buy
+                    age: 12,
+                    lineage: "african",
+                    weight : 900,
+                    is_female: true,
+                    img_source_url: "myurl",
+
+                    // Values we will be pulling from chain
+                    // hardcoding them for now...
+                    price: 100,
+                    current_owner: 0x348341035837599834,
+                    time_held: 12, //must define if this is hours days etc...
+                    highest_price: 12314,
+                    revenue_generated: 9
+                },
+                {   
+                    id: 6, 
+                    name: "Justin", // let user set this on first buy
+                    age: 12,
+                    lineage: "african",
+                    weight : 900,
+                    is_female: false,
+                    img_source_url: "myurl",
+
+                    // Values we will be pulling from chain
+                    // hardcoding them for now...
+                    price: 100,
+                    current_owner: 0x348341035837599834,
+                    time_held: 12, //must define if this is hours days etc...
+                    highest_price: 12314,
+                    revenue_generated: 9
+                },
+                {   
+                    id: 7, 
+                    name: "Michael", // let user set this on first buy
+                    age: 12,
+                    lineage: "african",
+                    weight : 900,
+                    is_female: false,
+                    img_source_url: "myurl",
+
+                    // Values we will be pulling from chain
+                    // hardcoding them for now...
+                    price: 100,
+                    current_owner: 0x348341035837599834,
+                    time_held: 12, //must define if this is hours days etc...
+                    highest_price: 12314,
+                    revenue_generated: 9
+                },
+                {   
+                    id: 8, 
+                    name: "Gustav", // let user set this on first buy
+                    age: 12,
+                    lineage: "african",
+                    weight : 900,
+                    is_female: true,
+                    img_source_url: "myurl",
+
+                    // Values we will be pulling from chain
+                    // hardcoding them for now...
+                    price: 100,
+                    current_owner: 0x348341035837599834,
+                    time_held: 12, //must define if this is hours days etc...
+                    highest_price: 12314,
+                    revenue_generated: 9
+                },
+                {   
+                    id: 9, 
+                    name: "George", // let user set this on first buy
+                    age: 12,
+                    lineage: "african",
+                    weight : 900,
+                    is_female: false,
+                    img_source_url: "myurl",
+
+                    // Values we will be pulling from chain
+                    // hardcoding them for now...
+                    price: 100,
+                    current_owner: 0x348341035837599834,
+                    time_held: 12, //must define if this is hours days etc...
+                    highest_price: 12314,
+                    revenue_generated: 9
+                },
+                {   
+                    id: 10, 
+                    name: "Sean", // let user set this on first buy
+                    age: 12,
+                    lineage: "african",
+                    weight : 900,
+                    is_female: false,
+                    img_source_url: "myurl",
+
+                    // Values we will be pulling from chain
+                    // hardcoding them for now...
+                    price: 100,
+                    current_owner: 0x348341035837599834,
+                    time_held: 12, //must define if this is hours days etc...
+                    highest_price: 12314,
+                    revenue_generated: 9
+                },
+
             ]
         }
     }
