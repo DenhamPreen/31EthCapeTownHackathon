@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
-import { Card, CardWrapper } from 'react-swipeable-cards';
+import { Card, CardWrapper } from 'react-swipeable-cards'
 import PropTypes from 'prop-types'
+import ThePressureCooker from './ThePressureCooker'
 
-class HeadingComponent extends Component {
+class SwipeCardComponent extends Component {
     onSwipe(data) {
         console.log(data.name + " was swiped.");
     }
@@ -16,7 +17,8 @@ class HeadingComponent extends Component {
 
     renderCards() {
         const cardStyle = {
-            backgroundColor: "#059FFF"
+            backgroundColor: "#2a3132",
+            height: '60vh'
         }
         let data = [{ id: 1, name: "First" }, { id: 2, name: "Second" }, { id: 3, name: "3rd" }, { id: 4, name: "4th" }, { id: 5, name: "5th" }];
         return data.map((d) => {
@@ -28,7 +30,13 @@ class HeadingComponent extends Component {
                     onSwipeLeft={this.onSwipeLeft.bind(this)}
                     onSwipeRight={this.onSwipeRight.bind(this)}
                     data={d}>
-                    {d.name}
+                        <ThePressureCooker
+                            secondsToCountDown = {10}
+                        />
+                        {d.name}
+                        <div>
+                            <button onClick={() => {console.log('hideme')}}>PerformAction</button>
+                        </div>
                 </Card>
             );
         });
@@ -36,8 +44,9 @@ class HeadingComponent extends Component {
 
     render() {
         const wrapperStyle = {
-            backgroundColor: "#024773",
+            backgroundColor: "#90Afc5",
             width: '100%',
+            height: '100vh',
             position: 'absolute',
             top: 0,
             left: 0
@@ -51,8 +60,8 @@ class HeadingComponent extends Component {
     }
 }
 
-HeadingComponent.propTypes = {
+SwipeCardComponent.propTypes = {
     // someprop: PropTypes.object.isRequired,
 };
 
-export default HeadingComponent;
+export default SwipeCardComponent;
