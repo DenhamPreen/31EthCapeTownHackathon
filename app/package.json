@@ -8,10 +8,11 @@
     "drizzle-react-components": "^1.2.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-id-swiper": "^2.1.2",
     "react-scripts": "^2.1.8",
-    "react-swipeable-cards": "^1.0.6",
     "rimble-ui": "^0.6.1",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.0",
+    "swiper": "^4.5.0"
   },
   "scripts": {
     "start": "react-scripts start",

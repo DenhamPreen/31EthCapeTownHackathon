@@ -4,14 +4,15 @@ import {
   ContractData,
   ContractForm,
 } from "drizzle-react-components";
-import SwipeCardComponent from './SwipeCardComponent';
+import AnimalCardContainer from './AnimalCardContainer'
+// import SwipeCardComponent from './SwipeCardComponent';
 
 import logo from "./logo.png";
 
 export default ({ accounts }) => (
   <div className="App">
 
-    <SwipeCardComponent/>
+    <AnimalCardContainer/>
     <div className="section">
       <h2>Active Account</h2>
       <AccountData accountIndex="0" units="ether" precision="3" />

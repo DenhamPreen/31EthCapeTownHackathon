@@ -1,17 +1,18 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
-import { Card, CardWrapper } from 'react-swipeable-cards'
 import PropTypes from 'prop-types'
-import ThePressureCooker from './ThePressureCooker'
-import AnimalImage from './AnimalImage'
 import FooterBarNav from './FooterBarNav'
+import AnimalCard from './AnimalCard'
 
-class SwipeCardComponent extends Component {
-    constructor(props){
+import Swiper from 'react-id-swiper';
+import './App.css'
+
+class AnimalCardContainer extends Component {
+    constructor(props) {
         super(props);
         this.state = {
-            showStore : true,
-            cards : [
+            showStore: true,
+            cards: [
                 { id: 1, name: "Jon Jon", cardDisplay: 'block' }
                 , { id: 2, name: "Zuckerberg", cardDisplay: 'block' }
                 , { id: 3, name: "3rd", cardDisplay: 'block' }
@@ -25,10 +26,6 @@ class SwipeCardComponent extends Component {
         }
     }
 
-    onSwipeRight(data) {
-        console.log(data.name + " Baby Im a gambling man");
-    }
-
     renderCards() {
         const cardStyle = {
             backgroundColor: "#2a3132",
@@ -36,25 +33,25 @@ class SwipeCardComponent extends Component {
         }
         return this.state.cards.map((specificCard, index) => {
             return (
-                <Card
-                    style={cardStyle}
-                    key={specificCard.id}
-                    onSwipeRight={this.onSwipeRight.bind(this)}     
-                    removeCard={true}               
-                    data={specificCard}>
-                        <ThePressureCooker
-                            secondsToCountDown = {10}
-                        />
-                        {specificCard.name}
-                        <AnimalImage/>
-                </Card>
+                <div>
+                    <AnimalCard Rhino={specificCard}/>
+                </div>
             );
         });
     }
 
     render() {
+
+        const params = {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true
+            }
+        };
+
         const altBackgroundStore = 'linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)';
-        const wrapperStyle = {
+        const containerViewPort = {
             backgroundImage: 'linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)',
             width: '100%',
             height: '100vh',
@@ -63,19 +60,26 @@ class SwipeCardComponent extends Component {
             left: 0
         }
 
-        return (        
-            <CardWrapper style={wrapperStyle}>
-                {this.renderCards()}
-                <FooterBarNav 
-                    winnings = '100 000'
-                />
-            </CardWrapper>
+        return (
+
+            // <div style={containerViewPort}>
+            <div>
+                <Swiper {...params}>
+                 {this.renderCards()}
+                    {/* <div style={{ height: '100vh', width: '100px', backgroundColor: 'blue' }}></div>
+                    <div style={{ height: '100vh', width: '100px', backgroundColor: 'pink' }}></div>
+                    <div style={{ height: '100vh', width: '100px', backgroundColor: 'purple' }}></div>
+                    <div style={{ height: '100vh', width: '100px', backgroundColor: 'yellow' }}></div>
+                    <div style={{ height: '100vh', width: '100px', backgroundColor: 'blue' }}></div> */}
+                </Swiper>
+                <FooterBarNav />
+            </div>
         );
     }
 }
 
-SwipeCardComponent.propTypes = {
+AnimalCardContainer.propTypes = {
     // someprop: PropTypes.object.isRequired,
 };
 
-export default SwipeCardComponent;
+export default AnimalCardContainer;
